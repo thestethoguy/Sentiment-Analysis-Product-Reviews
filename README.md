@@ -49,37 +49,37 @@ The complete analytical pipeline is illustrated below. Each node corresponds to 
 
 ```mermaid
 flowchart TD
-    A([📂 Data Ingestion\nReviews.csv · nrows=5000]) --> B
+    A(["📂 Data Ingestion<br/>Reviews.csv · nrows=5000"]) --> B
 
-    B[🔍 Schema Reduction\nRetain 'Text' + 'Score' only] --> C
+    B["🔍 Schema Reduction<br/>Retain 'Text' + 'Score' only"] --> C
 
-    C[🧹 Null Handling\ndf.dropna on Text & Score] --> D
+    C["🧹 Null Handling<br/>df.dropna on Text & Score"] --> D
 
-    D[🧹 Blank-String Removal\nstr.strip != '' filter] --> E
+    D["🧹 Blank-String Removal<br/>str.strip != '' filter"] --> E
 
-    E[🧹 Deduplication\ndf.drop_duplicates] --> F
+    E["🧹 Deduplication<br/>df.drop_duplicates"] --> F
 
-    F([✅ Clean Corpus\n~4,992 rows]) --> G
+    F(["✅ Clean Corpus<br/>~4,992 rows"]) --> G
 
-    G[⚙️ Polarity Engine\nTextBlob · sentiment.polarity\nRange: -1.0 → +1.0] --> H
+    G["⚙️ Polarity Engine<br/>TextBlob · sentiment.polarity<br/>Range: -1.0 → +1.0"] --> H
 
-    H{🔀 Polarity Mapping}
+    H{"🔀 Polarity Mapping"}
 
-    H -->|polarity > 0| I[🟢 Positive]
-    H -->|polarity = 0| J[⚪ Neutral]
-    H -->|polarity < 0| K[🔴 Negative]
+    H -->|"polarity > 0"| I["🟢 Positive"]
+    H -->|"polarity = 0"| J["⚪ Neutral"]
+    H -->|"polarity < 0"| K["🔴 Negative"]
 
-    I --> L([📊 Sentiment Column\ndf\['Sentiment'\]])
+    I --> L(["📊 Sentiment Column<br/>df-Sentiment"])
     J --> L
     K --> L
 
-    L --> M[📈 Visualization Engine\nSeaborn · Matplotlib · WordCloud]
+    L --> M["📈 Visualization Engine<br/>Seaborn · Matplotlib · WordCloud"]
 
-    M --> N[Bar Chart\nchart1_bar.png]
-    M --> O[Donut Chart\nchart2_donut.png]
-    M --> P[WordCloud\nchart3_wordcloud.png]
+    M --> N["Bar Chart<br/>chart1_bar.png"]
+    M --> O["Donut Chart<br/>chart2_donut.png"]
+    M --> P["WordCloud<br/>chart3_wordcloud.png"]
 
-    N --> Q([💡 Actionable Insight Report\nKeyword Frequency · KPI Summary])
+    N --> Q(["💡 Actionable Insight Report<br/>Keyword Frequency · KPI Summary"])
     O --> Q
     P --> Q
 
@@ -91,6 +91,8 @@ flowchart TD
     style K fill:#922B21,color:#fff,stroke:#922B21
     style Q fill:#1B2A4A,color:#fff,stroke:#0D7A6E
 ```
+    
+    
 
 ---
 
