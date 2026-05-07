@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white" />
   <img src="https://img.shields.io/badge/TextBlob-NLP-FF6F61?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Week%201%20Deliverable-8B5CF6?style=for-the-badge" />
+  
 </p>
 
 > **Author:** Aman Aaryan · Data Analyst
